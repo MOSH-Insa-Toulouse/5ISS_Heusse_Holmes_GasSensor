@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>/Users/cyprienh/Documents/1 - INSA/5A/Sensors/Gas_Sensor/Gas_Sensor.kicad_sch</source>
+    <date>Wednesday, December 13, 2023 at 08:09:01 AM</date>
+    <tool>Eeschema 7.0.9</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>Shield Capteur de Gaz &amp; LoRa</title>
+        <company>INSA Toulouse</company>
+        <rev>1.0</rev>
+        <date>2023-12-06</date>
+        <source>Gas_Sensor.kicad_sch</source>
+        <comment number="1" value="Emily Holmes, Cyprien Heusse"/>
+        <comment number="2" value="GEI - 5AE-ISS"/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="A1">
+      <value>Arduino_Uno_R3_Shield</value>
+      <footprint>PCM_arduino-library:Arduino_Uno_R3_Shield</footprint>
+      <datasheet>https://docs.arduino.cc/hardware/uno-rev3</datasheet>
+      <libsource lib="PCM_arduino-library" part="Arduino_Uno_R3_Shield" description="Shield for Arduino Uno R3"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Gas_Sensor.kicad_sch"/>
+      <property name="ki_description" value="Shield for Arduino Uno R3"/>
+      <property name="ki_keywords" value="Arduino MPU Shield"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f82a9468-1078-481f-8e4f-206d8db0ce8e</tstamps>
+    </comp>
+    <comp ref="C1">
+      <value>100n</value>
+      <footprint>Capacitor_THT:C_Disc_D7.0mm_W2.5mm_P5.00mm</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Gas_Sensor.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c3c027d5-442d-4507-9a47-148909ee42e2</tstamps>
+    </comp>
+    <comp ref="C2">
+      <value>100n</value>
+      <footprint>Capacitor_THT:C_Disc_D7.0mm_W2.5mm_P5.00mm</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Gas_Sensor.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8a187bf1-ea84-4afe-affc-1a668e8a77c9</tstamps>
+    </comp>
+    <comp ref="C3">
+      <value>100n</value>
+      <footprint>Capacitor_THT:C_Disc_D7.0mm_W2.5mm_P5.00mm</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Gas_Sensor.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ec1b6362-fad1-48f4-8121-b15238bdfa17</tstamps>
+    </comp>
+    <comp ref="C4">
+      <value>1u</value>
+      <footprint>Capacitor_THT:C_Disc_D7.0mm_W2.5mm_P5.00mm</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Gas_Sensor.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b008d2bf-a5a3-4515-b891-6c71da372290</tstamps>
+    </comp>
+    <comp ref="J1">
+      <value>Conn_01x07</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x07" description="Generic connector, single row, 01x07, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Gas_Sensor.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, single row, 01x07, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f4c0bd57-2fb8-4a1f-a7f1-b0b14fd144e1</tstamps>
+    </comp>
+    <comp ref="Q1">
+      <value>IRF520</value>
+      <footprint>Package_TO_SOT_THT:TO-220-3_Vertical</footprint>
+      <datasheet>http://www.irf.com/product-info/datasheets/data/irf540n.pdf</datasheet>
+      <libsource lib="Transistor_FET" part="IRF540N" description="33A Id, 100V Vds, HEXFET N-Channel MOSFET, TO-220"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Gas_Sensor.kicad_sch"/>
+      <property name="ki_description" value="33A Id, 100V Vds, HEXFET N-Channel MOSFET, TO-220"/>
+      <property name="ki_keywords" value="HEXFET N-Channel MOSFET"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d5641b2f-fc94-4c26-b6ed-9ba6edc93ed2</tstamps>
+    </comp>
+    <comp ref="R1">
+      <value>100k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Gas_Sensor.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e0c937a8-c7ac-4eda-ad76-32cc89b41d25</tstamps>
+    </comp>
+    <comp ref="R3">
+      <value>100k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Gas_Sensor.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>20d64881-e218-41de-815c-a12b5153cb21</tstamps>
+    </comp>
+    <comp ref="R4">
+      <value>10k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Gas_Sensor.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1929c794-2cd4-49e1-affd-d00c1bc93ab4</tstamps>
+    </comp>
+    <comp ref="R5">
+      <value>1k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Gas_Sensor.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>cc5fd19d-b753-44be-9adf-acb90246f6d1</tstamps>
+    </comp>
+    <comp ref="R6">
+      <value>100</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Gas_Sensor.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>86c316a9-4057-4698-96c9-b60c9925541b</tstamps>
+    </comp>
+    <comp ref="R7">
+      <value>10k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Gas_Sensor.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>58dc7d23-7825-48d8-9014-00eacdf54612</tstamps>
+    </comp>
+    <comp ref="R8">
+      <value>1k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Gas_Sensor.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1ca1dd1d-bdc8-4777-80d3-a397fe5a0641</tstamps>
+    </comp>
+    <comp ref="SW1">
+      <value>SW_SPDT</value>
+      <footprint>Gas:SLW12768644AD</footprint>
+      <libsource lib="Switch" part="SW_SPDT" description="Switch, single pole double throw"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Gas_Sensor.kicad_sch"/>
+      <property name="ki_description" value="Switch, single pole double throw"/>
+      <property name="ki_keywords" value="switch single-pole double-throw spdt ON-ON"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f869cc56-a72c-41b3-88b9-1b5e29b06bea</tstamps>
+    </comp>
+    <comp ref="U1">
+      <value>Capteur_Gaz</value>
+      <footprint>Package_TO_SOT_THT:TO-5-10</footprint>
+      <libsource lib="Gas" part="gas_sensor" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Gas_Sensor.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e4a7015b-49f6-440f-9b88-1a850bd545fc</tstamps>
+    </comp>
+    <comp ref="U2">
+      <value>~</value>
+      <footprint>Package_DIP:DIP-8_W7.62mm</footprint>
+      <libsource lib="Gas" part="LTC1050" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Gas_Sensor.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4a52d7bf-3034-4529-a306-5d8941cc51b7</tstamps>
+    </comp>
+    <comp ref="U3">
+      <value>MCP41100</value>
+      <footprint>Package_DIP:DIP-8_W7.62mm</footprint>
+      <datasheet>http://ww1.microchip.com/downloads/en/DeviceDoc/11195c.pdf</datasheet>
+      <libsource lib="Potentiometer_Digital" part="MCP41100" description="Single Digital Potentiometer, SPI interface, 256 taps, 100 kohm"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Gas_Sensor.kicad_sch"/>
+      <property name="ki_description" value="Single Digital Potentiometer, SPI interface, 256 taps, 100 kohm"/>
+      <property name="ki_keywords" value="R POT"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3eea5402-4349-401d-94f4-8ef8b417482c</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector_Generic" part="Conn_01x07">
+      <description>Generic connector, single row, 01x07, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x07</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Gas" part="LTC1050">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Footprint">Package_DIP:DIP-8_W7.62mm</field>
+      </fields>
+      <pins>
+        <pin num="1" name="NC" type="no_connect"/>
+        <pin num="2" name="IN-" type="input"/>
+        <pin num="3" name="IN+" type="input"/>
+        <pin num="4" name="V-" type="power_in"/>
+        <pin num="5" name="NC" type="no_connect"/>
+        <pin num="6" name="V+" type="power_in"/>
+        <pin num="7" name="OUT" type="power_in"/>
+        <pin num="8" name="CLK" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="Gas" part="gas_sensor">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Footprint">Package_TO_SOT_THT:TO-5-10</field>
+      </fields>
+      <pins>
+        <pin num="1" name="TempA" type="output"/>
+        <pin num="2" name="Gas1A" type="output"/>
+        <pin num="3" name="ResA" type="input"/>
+        <pin num="4" name="Gas1B" type="output"/>
+        <pin num="5" name="NC" type="bidirectional"/>
+        <pin num="6" name="TempB" type="output"/>
+        <pin num="7" name="Gas2A" type="output"/>
+        <pin num="8" name="ResB" type="input"/>
+        <pin num="9" name="Gas2B" type="output"/>
+        <pin num="10" name="NC" type="bidirectional"/>
+      </pins>
+    </libpart>
+    <libpart lib="PCM_arduino-library" part="Arduino_Uno_R3_Shield">
+      <description>Shield for Arduino Uno R3</description>
+      <docs>https://docs.arduino.cc/hardware/uno-rev3</docs>
+      <footprints>
+        <fp>Arduino_Uno_R3_Shield</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">A</field>
+        <field name="Value">Arduino_Uno_R3_Shield</field>
+        <field name="Footprint">PCM_arduino-library:Arduino_Uno_R3_Shield</field>
+        <field name="Datasheet">https://docs.arduino.cc/hardware/uno-rev3</field>
+      </fields>
+      <pins>
+        <pin num="3V3" name="3.3V" type="power_out"/>
+        <pin num="5V1" name="5V" type="power_in"/>
+        <pin num="5V2" name="SPI_5V" type="power_in"/>
+        <pin num="A0" name="A0" type="bidirectional"/>
+        <pin num="A1" name="A1" type="bidirectional"/>
+        <pin num="A2" name="A2" type="bidirectional"/>
+        <pin num="A3" name="A3" type="bidirectional"/>
+        <pin num="A4" name="A4" type="bidirectional"/>
+        <pin num="A5" name="A5" type="bidirectional"/>
+        <pin num="AREF" name="AREF" type="input"/>
+        <pin num="D0" name="D0/RX" type="bidirectional"/>
+        <pin num="D1" name="D1/TX" type="bidirectional"/>
+        <pin num="D2" name="D2_INT0" type="bidirectional"/>
+        <pin num="D3" name="D3_INT1" type="bidirectional"/>
+        <pin num="D4" name="D4" type="bidirectional"/>
+        <pin num="D5" name="D5" type="bidirectional"/>
+        <pin num="D6" name="D6" type="bidirectional"/>
+        <pin num="D7" name="D7" type="bidirectional"/>
+        <pin num="D8" name="D8" type="bidirectional"/>
+        <pin num="D9" name="D9" type="bidirectional"/>
+        <pin num="D10" name="D10_CS" type="bidirectional"/>
+        <pin num="D11" name="D11" type="bidirectional"/>
+        <pin num="D12" name="D12" type="bidirectional"/>
+        <pin num="D13" name="D13" type="bidirectional"/>
+        <pin num="GND1" name="GND" type="power_in"/>
+        <pin num="GND2" name="GND" type="power_in"/>
+        <pin num="GND3" name="GND" type="power_in"/>
+        <pin num="GND4" name="SPI_GND" type="power_in"/>
+        <pin num="IORF" name="IOREF" type="output"/>
+        <pin num="MISO" name="SPI_MISO" type="input"/>
+        <pin num="MOSI" name="SPI_MOSI" type="output"/>
+        <pin num="RST1" name="RESET" type="open_collector"/>
+        <pin num="RST2" name="SPI_RESET" type="open_collector"/>
+        <pin num="SCK" name="SPI_SCK" type="output"/>
+        <pin num="SCL" name="SCL" type="bidirectional"/>
+        <pin num="SDA" name="SDA" type="bidirectional"/>
+        <pin num="VIN" name="VIN" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Potentiometer_Digital" part="MCP41100">
+      <description>Single Digital Potentiometer, SPI interface, 256 taps, 100 kohm</description>
+      <docs>http://ww1.microchip.com/downloads/en/DeviceDoc/11195c.pdf</docs>
+      <footprints>
+        <fp>DIP*W7.62mm*</fp>
+        <fp>SOIC*P1.27mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">MCP41100</field>
+        <field name="Datasheet">http://ww1.microchip.com/downloads/en/DeviceDoc/11195c.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~{CS}" type="input"/>
+        <pin num="2" name="SCK" type="passive"/>
+        <pin num="3" name="SI" type="input"/>
+        <pin num="4" name="VSS" type="power_in"/>
+        <pin num="5" name="PA0" type="passive"/>
+        <pin num="6" name="PW0" type="passive"/>
+        <pin num="7" name="PB0" type="passive"/>
+        <pin num="8" name="VDD" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Switch" part="SW_SPDT">
+      <description>Switch, single pole double throw</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">SW_SPDT</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="B" type="passive"/>
+        <pin num="3" name="C" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Transistor_FET" part="IRF540N">
+      <description>33A Id, 100V Vds, HEXFET N-Channel MOSFET, TO-220</description>
+      <docs>http://www.irf.com/product-info/datasheets/data/irf540n.pdf</docs>
+      <footprints>
+        <fp>TO?220*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">IRF540N</field>
+        <field name="Footprint">Package_TO_SOT_THT:TO-220-3_Vertical</field>
+        <field name="Datasheet">http://www.irf.com/product-info/datasheets/data/irf540n.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="input"/>
+        <pin num="2" name="D" type="passive"/>
+        <pin num="3" name="S" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector_Generic">
+      <uri>/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols//Connector_Generic.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols//Device.kicad_sym</uri>
+    </library>
+    <library logical="Gas">
+      <uri>/Users/cyprienh/Documents/1 - INSA/5A/Sensors/Gas_Sensor/Gas.kicad_sym</uri>
+    </library>
+    <library logical="PCM_arduino-library">
+      <uri>/Users/cyprienh/Documents/KiCad/7.0/3rdparty/symbols/com_github_alarm-siren_arduino-kicad-library/arduino-library.kicad_sym</uri>
+    </library>
+    <library logical="Potentiometer_Digital">
+      <uri>/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols//Potentiometer_Digital.kicad_sym</uri>
+    </library>
+    <library logical="Switch">
+      <uri>/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols//Switch.kicad_sym</uri>
+    </library>
+    <library logical="Transistor_FET">
+      <uri>/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols//Transistor_FET.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="+3.3V">
+      <node ref="A1" pin="3V3" pinfunction="3.3V" pintype="power_out"/>
+      <node ref="J1" pin="4" pinfunction="Pin_4" pintype="passive"/>
+    </net>
+    <net code="2" name="+5V">
+      <node ref="A1" pin="5V1" pinfunction="5V" pintype="power_in"/>
+      <node ref="C3" pin="1" pintype="passive"/>
+      <node ref="R6" pin="2" pintype="passive"/>
+      <node ref="U1" pin="4" pinfunction="Gas1B" pintype="output"/>
+      <node ref="U1" pin="7" pinfunction="Gas2A" pintype="output"/>
+      <node ref="U2" pin="6" pinfunction="V+" pintype="power_in"/>
+      <node ref="U3" pin="8" pinfunction="VDD" pintype="power_in"/>
+    </net>
+    <net code="3" name="+12V">
+      <node ref="A1" pin="VIN" pinfunction="VIN" pintype="power_in"/>
+      <node ref="R7" pin="1" pintype="passive"/>
+    </net>
+    <net code="4" name="ADC1">
+      <node ref="A1" pin="A1" pinfunction="A1" pintype="bidirectional"/>
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="R5" pin="2" pintype="passive"/>
+    </net>
+    <net code="5" name="ADC2">
+      <node ref="A1" pin="A0" pinfunction="A0" pintype="bidirectional"/>
+      <node ref="R6" pin="1" pintype="passive"/>
+      <node ref="U1" pin="6" pinfunction="TempB" pintype="output"/>
+    </net>
+    <net code="6" name="GAS1">
+      <node ref="SW1" pin="1" pinfunction="A" pintype="passive"/>
+      <node ref="U1" pin="2" pinfunction="Gas1A" pintype="output"/>
+    </net>
+    <net code="7" name="GAS2">
+      <node ref="SW1" pin="3" pinfunction="C" pintype="passive"/>
+      <node ref="U1" pin="9" pinfunction="Gas2B" pintype="output"/>
+    </net>
+    <net code="8" name="GND">
+      <node ref="A1" pin="GND1" pinfunction="GND" pintype="power_in"/>
+      <node ref="A1" pin="GND2" pinfunction="GND" pintype="power_in"/>
+      <node ref="A1" pin="GND3" pinfunction="GND" pintype="power_in"/>
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="C3" pin="2" pintype="passive"/>
+      <node ref="J1" pin="6" pinfunction="Pin_6" pintype="passive"/>
+      <node ref="Q1" pin="3" pinfunction="S" pintype="passive"/>
+      <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="U1" pin="1" pinfunction="TempA" pintype="output"/>
+      <node ref="U1" pin="10" pinfunction="NC" pintype="bidirectional"/>
+      <node ref="U1" pin="3" pinfunction="ResA" pintype="input"/>
+      <node ref="U1" pin="5" pinfunction="NC" pintype="bidirectional"/>
+      <node ref="U2" pin="4" pinfunction="V-" pintype="power_in"/>
+      <node ref="U3" pin="1" pinfunction="~{CS}" pintype="input"/>
+      <node ref="U3" pin="4" pinfunction="VSS" pintype="power_in"/>
+      <node ref="U3" pin="6" pinfunction="PW0" pintype="passive"/>
+      <node ref="U3" pin="7" pinfunction="PB0" pintype="passive"/>
+    </net>
+    <net code="9" name="MOSI">
+      <node ref="A1" pin="D11" pinfunction="D11" pintype="bidirectional"/>
+      <node ref="U3" pin="3" pinfunction="SI" pintype="input"/>
+    </net>
+    <net code="10" name="Net-(Q1-G)">
+      <node ref="Q1" pin="1" pinfunction="G" pintype="input"/>
+      <node ref="R8" pin="2" pintype="passive"/>
+    </net>
+    <net code="11" name="Net-(SW1-B)">
+      <node ref="R4" pin="1" pintype="passive"/>
+      <node ref="SW1" pin="2" pinfunction="B" pintype="passive"/>
+    </net>
+    <net code="12" name="Net-(U2-IN+)">
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="R1" pin="1" pintype="passive"/>
+      <node ref="R4" pin="2" pintype="passive"/>
+      <node ref="U2" pin="3" pinfunction="IN+" pintype="input"/>
+    </net>
+    <net code="13" name="Net-(U2-OUT)">
+      <node ref="C4" pin="2" pintype="passive"/>
+      <node ref="R3" pin="2" pintype="passive"/>
+      <node ref="R5" pin="1" pintype="passive"/>
+      <node ref="U2" pin="7" pinfunction="OUT" pintype="power_in"/>
+    </net>
+    <net code="14" name="RST">
+      <node ref="A1" pin="D4" pinfunction="D4" pintype="bidirectional"/>
+      <node ref="J1" pin="1" pinfunction="Pin_1" pintype="passive"/>
+    </net>
+    <net code="15" name="RX">
+      <node ref="A1" pin="D6" pinfunction="D6" pintype="bidirectional"/>
+      <node ref="J1" pin="3" pinfunction="Pin_3" pintype="passive"/>
+    </net>
+    <net code="16" name="Rvar">
+      <node ref="C4" pin="1" pintype="passive"/>
+      <node ref="R3" pin="1" pintype="passive"/>
+      <node ref="U2" pin="2" pinfunction="IN-" pintype="input"/>
+      <node ref="U3" pin="5" pinfunction="PA0" pintype="passive"/>
+    </net>
+    <net code="17" name="SCK">
+      <node ref="A1" pin="D13" pinfunction="D13" pintype="bidirectional"/>
+      <node ref="U3" pin="2" pinfunction="SCK" pintype="passive"/>
+    </net>
+    <net code="18" name="SW_12V">
+      <node ref="Q1" pin="2" pinfunction="D" pintype="passive"/>
+      <node ref="R7" pin="2" pintype="passive"/>
+      <node ref="U1" pin="8" pinfunction="ResB" pintype="input"/>
+    </net>
+    <net code="19" name="SW_CTL">
+      <node ref="A1" pin="D2" pinfunction="D2_INT0" pintype="bidirectional"/>
+      <node ref="R8" pin="1" pintype="passive"/>
+    </net>
+    <net code="20" name="TX">
+      <node ref="A1" pin="D5" pinfunction="D5" pintype="bidirectional"/>
+      <node ref="J1" pin="2" pinfunction="Pin_2" pintype="passive"/>
+    </net>
+    <net code="21" name="unconnected-(A1-D0{slash}RX-PadD0)">
+      <node ref="A1" pin="D0" pinfunction="D0/RX" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="22" name="unconnected-(A1-D1{slash}TX-PadD1)">
+      <node ref="A1" pin="D1" pinfunction="D1/TX" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="23" name="unconnected-(A1-D3_INT1-PadD3)">
+      <node ref="A1" pin="D3" pinfunction="D3_INT1" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="24" name="unconnected-(A1-D10_CS-PadD10)">
+      <node ref="A1" pin="D10" pinfunction="D10_CS" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="25" name="unconnected-(A1-IOREF-PadIORF)">
+      <node ref="A1" pin="IORF" pinfunction="IOREF" pintype="output+no_connect"/>
+    </net>
+    <net code="26" name="unconnected-(A1-PadA2)">
+      <node ref="A1" pin="A2" pinfunction="A2" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="27" name="unconnected-(A1-PadA3)">
+      <node ref="A1" pin="A3" pinfunction="A3" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="28" name="unconnected-(A1-PadA4)">
+      <node ref="A1" pin="A4" pinfunction="A4" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="29" name="unconnected-(A1-PadA5)">
+      <node ref="A1" pin="A5" pinfunction="A5" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="30" name="unconnected-(A1-PadAREF)">
+      <node ref="A1" pin="AREF" pinfunction="AREF" pintype="input+no_connect"/>
+    </net>
+    <net code="31" name="unconnected-(A1-PadD7)">
+      <node ref="A1" pin="D7" pinfunction="D7" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="32" name="unconnected-(A1-PadD8)">
+      <node ref="A1" pin="D8" pinfunction="D8" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="33" name="unconnected-(A1-PadD9)">
+      <node ref="A1" pin="D9" pinfunction="D9" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="34" name="unconnected-(A1-PadD12)">
+      <node ref="A1" pin="D12" pinfunction="D12" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="35" name="unconnected-(A1-PadSCL)">
+      <node ref="A1" pin="SCL" pinfunction="SCL" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="36" name="unconnected-(A1-PadSDA)">
+      <node ref="A1" pin="SDA" pinfunction="SDA" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="37" name="unconnected-(A1-RESET-PadRST1)">
+      <node ref="A1" pin="RST1" pinfunction="RESET" pintype="open_collector+no_connect"/>
+    </net>
+    <net code="38" name="unconnected-(A1-SPI_5V-Pad5V2)">
+      <node ref="A1" pin="5V2" pinfunction="SPI_5V" pintype="power_in+no_connect"/>
+    </net>
+    <net code="39" name="unconnected-(A1-SPI_GND-PadGND4)">
+      <node ref="A1" pin="GND4" pinfunction="SPI_GND" pintype="power_in+no_connect"/>
+    </net>
+    <net code="40" name="unconnected-(A1-SPI_MISO-PadMISO)">
+      <node ref="A1" pin="MISO" pinfunction="SPI_MISO" pintype="input+no_connect"/>
+    </net>
+    <net code="41" name="unconnected-(A1-SPI_MOSI-PadMOSI)">
+      <node ref="A1" pin="MOSI" pinfunction="SPI_MOSI" pintype="output+no_connect"/>
+    </net>
+    <net code="42" name="unconnected-(A1-SPI_RESET-PadRST2)">
+      <node ref="A1" pin="RST2" pinfunction="SPI_RESET" pintype="open_collector+no_connect"/>
+    </net>
+    <net code="43" name="unconnected-(A1-SPI_SCK-PadSCK)">
+      <node ref="A1" pin="SCK" pinfunction="SPI_SCK" pintype="output+no_connect"/>
+    </net>
+    <net code="44" name="unconnected-(J1-Pin_5-Pad5)">
+      <node ref="J1" pin="5" pinfunction="Pin_5" pintype="passive+no_connect"/>
+    </net>
+    <net code="45" name="unconnected-(J1-Pin_7-Pad7)">
+      <node ref="J1" pin="7" pinfunction="Pin_7" pintype="passive+no_connect"/>
+    </net>
+    <net code="46" name="unconnected-(U2-CLK-Pad8)">
+      <node ref="U2" pin="8" pinfunction="CLK" pintype="input+no_connect"/>
+    </net>
+    <net code="47" name="unconnected-(U2-NC-Pad1)">
+      <node ref="U2" pin="1" pinfunction="NC" pintype="no_connect"/>
+    </net>
+    <net code="48" name="unconnected-(U2-NC-Pad5)">
+      <node ref="U2" pin="5" pinfunction="NC" pintype="no_connect"/>
+    </net>
+  </nets>
+</export>
