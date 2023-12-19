@@ -53,3 +53,17 @@ There are 10 pins, which are:
 
 ### End goal: How should the system work?
 To be continued another day because I'm tired
+
+## Amplifying the signal from the sensor
+The gas sensor we made has a huge resistance which varies depending on the presence of gas and on the nature of said gas. The value of the resistance will be around a G&Omega; meaning the current that will flow through it and to the ADC will be extremely small (around a nA). Since we will use an Arduino which only has a 10-bit ADC, we need to amplify the signal exiting the gas sensor. To do so we designed an amplifier circuit based on an operational amplifier using LTSpice. 
+
+### LTSpice simulation
+The amplifier is based on 3 different filters, each with their own cutoff frequency. The firt filter is made from C1, R1 and R5, the second one from C4 and R3 and the last one from C2 and R4.
+To better simulate the behaviour of the circuit, we created a component to simulate the gas sensor as closely as possible. The sensor component is actually a circuit itself:
+![Circuit for simulating the sensor](https://cdn.discordapp.com/attachments/638778639109980178/1184408570310172742/image-2.png?ex=658bdd70&is=65796870&hm=f41d5192dc1dae9e33aafed96d365d8dfedfa531211888c3f6367c366a11ee33&)
+The circuit as a whole is as follows:
+![LTSpice circuit of the amplifier](https://cdn.discordapp.com/attachments/638778639109980178/1184406077937299456/image-1.png?ex=658bdb1e&is=6579661e&hm=c0b64f1f050cfdfe74fa9a9797119ba6fddffff3b6776a719cc9ba185897cda7&)
+
+
+## PCB design using KiCad
+Once tests have been made using an off-the-shelf gas sensor, we can go to designing
