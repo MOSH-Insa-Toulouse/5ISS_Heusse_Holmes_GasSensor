@@ -151,4 +151,14 @@ Energy savings are one of the key metrics to keep track of in IoT. Here are some
 ## Node-RED
 
 To finalize this project, we created a dashboard using Node-RED to show the values sent via LoRa. 
+A simple dashboard indicating the last message received along with the gas type, and the presence of gas. The flow is visible below, as well as a GIF of the dashboard in function.
 
+![nodered](https://cdn.discordapp.com/attachments/638778639109980178/1187350230602088529/dashboard.png?ex=65969112&is=65841c12&hm=38876362430c4593d9f59f59c712c4cdcecf35a58fd2cdda9cdf3de9ebd0d929&)
+
+[![dashboard](https://i.gyazo.com/8564e397834e893862e17c3f704f2910.gif)](https://gyazo.com/8564e397834e893862e17c3f704f2910)
+
+
+## Conclusion and Future Work
+By the end of the project, we have the core of a smart sensor system with the ability to monitor it on an external application. To finalize this work, it would be necessary to edit the program with accurate values for gas sensitivity from the sensor. 
+
+Nevertheless, this repository provides a solid basis to conceive and use this smart sensor, with an approach from a physical, electronical, and software point of view. 
