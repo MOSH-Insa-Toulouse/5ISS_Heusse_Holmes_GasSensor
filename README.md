@@ -36,7 +36,7 @@ For this, we had to use the LoRa gateway at INSA via Chirpstack. To replicate th
 
 You will also need: 
 - An Arduino UNO
-- An RN2483 LoRa module and an antenna
+- A RN2483 LoRa module and an antenna
 - A MQ2 gas sensor (or a MQX sensor, but ensure you have gas you can test it with available. MQ2 is easy to test with a lighter)
 - Cables 
 
@@ -48,14 +48,14 @@ You will also need:
 ### Results
 The program sends a message when gas is detected. This message is a "1" (which might read as "0x31" in ASCII). No more messages are sent until the gas level fall below the threshold and we send a "0" (which might read as "0x30" in ACSII).
 
-![final circuit](https://media.discordapp.net/attachments/478677987831578645/1181505875479904286/PXL_20231205_080117070.MP2.jpg?ex=65814e18&is=656ed918&hm=08d3848640994ea0a08ba0beea36754597e01953486f734bd7251ad09fec1c00&=&format=webp&width=1026&height=577)
+![final circuit](https://media.discordapp.net/attachments/478677987831578645/1181505875479904286/PXL_20231205_080117070.MP2.jpg)
 Left: Gas sensor, top: RN2483 with antenna, bottom: Arduino UNO.
 
 ## AIME Gas Sensor and KiCad
 After getting warmed up with the industrial sensor, we started working on the final project.
 
 ### Project Goals
-As we want to create smart sensor, it should be capable of performing various tasks without human intervention. Some of those tasks are:
+As we want to create a smart sensor, it should be capable of performing various tasks without human intervention. Some of those tasks are:
 - Calibrating itself
 - Measuring its temperature and, if outside of operating temperature ranges, regenerate itself
 - Recognizing a gas by comparing measured values to known characteristics
@@ -64,30 +64,48 @@ As we want to create smart sensor, it should be capable of performing various ta
 ### AIME Sensor
 The sensor made at AIME has the following schematics:
 
-<img src="https://cdn.discordapp.com/attachments/478677987831578645/1181508059709853696/image.png?ex=65815020&is=656edb20&hm=6460b3e81fa263fb95ca48d8f5e4c76be8bfa6773b01d3a3d7b7afe4b3b43e5e&" height="400" />
+<img src="https://cdn.discordapp.com/attachments/478677987831578645/1181508059709853696/image.png" height="400" />
 
 There are 10 pins, which are:
 - Two N.C. 
-- The power (up to 20V).
+- The heating resistor (up to 20V).
 - The temperature sensor.
-- The gas sensors themselves (2 of them, so we could theorically deposit two different gases).   
+- The gas sensors themselves (2 of them, so we could theorically have two areas for detecting and evene detect different gases).
 
 ## Amplifying the Signal from the Sensor
-The gas sensor made has a huge resistance which varies depending on the presence of gas and on the nature of said gas. The value of the resistance will in a range of G&Omega; meaning the current that will flow through it and to the ADC will be extremely small (around a nA). Since we will use an Arduino with only a 10-bit ADC, we need to amplify the signal exiting the gas sensor. To do so, we designed an amplifier circuit based on an operational amplifier using LTSpice. 
+The gas sensor made has a huge resistance which varies depending on the presence of gas and on the nature of said gas. The value of the resistance will be around a G&Omega; meaning the current that will flow through it and to the ADC will be extremely small (around a nA). Since we will use an Arduino with only a 10-bit ADC, we need to amplify the signal exiting the gas sensor. To do so, we designed an amplifier circuit based on an operational amplifier using LTSpice. 
 
 ### LTSpice Simulation
 The amplifier is based on 3 different filters, each with their own cutoff frequency. The first filter is centered around C1, R1 and R5, the second one from C4 and R3 and the last one from C2 and R4.
 To better simulate the behaviour of the circuit, we created a component to simulate the gas sensor behavior as closely as possible. The sensor component is actually a circuit itself:
 
-![Circuit for simulating the sensor](https://cdn.discordapp.com/attachments/638778639109980178/1184408570310172742/image-2.png?ex=658bdd70&is=65796870&hm=f41d5192dc1dae9e33aafed96d365d8dfedfa531211888c3f6367c366a11ee33&)
+![Circuit for simulating the sensor](https://cdn.discordapp.com/attachments/638778639109980178/1184408570310172742/image-2.png)
 
 The circuit as a whole is as follows:
 
-![LTSpice circuit of the amplifier](https://cdn.discordapp.com/attachments/638778639109980178/1184406077937299456/image-1.png?ex=658bdb1e&is=6579661e&hm=c0b64f1f050cfdfe74fa9a9797119ba6fddffff3b6776a719cc9ba185897cda7&)
+![LTSpice circuit of the amplifier](https://cdn.discordapp.com/attachments/638778639109980178/1184406077937299456/image-1.png)
 
 ### Caracterizing the Amplification
 
-(TODO: cut off frequencies etc.)
+Below are the cutoff frequencies of each filter.
+
+| Filter | Cutoff frequency |
+|--------|------------------|
+| 1      | 16 Hz            |
+| 2      | 1.6 Hz           |
+| 3      | 1600 Hz          |
+
+These filters have different purposes:
+- The first filter is used to filter the sensor's noise itself
+- The second filter is used to filter the 50Hz frequency from the power grid.
+- The last filter is an anti-aliasing filter.
+
+From this circuit we can deduce the resistance value of the gas sensor from the voltage on the ADC using the following formula:
+
+![Formula for the sensor resistance](https://cdn.discordapp.com/attachments/638778639109980178/1187344050660065300/equation.png)
+
+Where R is the resistance of the sensor and V<sub>ADC</sub> is the voltage detected by the ADC (between 0 and +5V, coded between 0 and 1023).
+
 
 ## Printed Circuit Board (PCB) design using KiCad
 
@@ -107,17 +125,17 @@ The required components are:
 - IRF520 NMOS (1)
 - 7-pin header (1) for a LoRa RN2483 module
 
-And the gas sensor conceived at AIME in a TO-10 package. The PCB is made to work with an Arduino shield. 
+And the gas sensor conceived at AIME in a TO-5 10-pin package. The PCB is made to work with an Arduino shield. 
 
 Below is a view of the routed PCB on KiCad.
 
-![kicad](https://cdn.discordapp.com/attachments/638778639109980178/1186673919462219837/image.png?ex=65941b35&is=6581a635&hm=4a262f05d37b6b8d9f82743d3cc53b2f967bbaf6c76daf2ac33d0e06a96061ed&)
+![kicad](https://cdn.discordapp.com/attachments/638778639109980178/1186673919462219837/image.png)
 
 ### Soldered PCB
 
 The PCB, once soldered with the LoRa module and its antenna, is pictured below. As explained above, it is printed on the bottom layer. From top to bottom, you can see: the antenna (on the left, cutoff), the LoRa module, the PCB, and the Arduino shield.
 
-![final pcb](https://media.discordapp.net/attachments/638778639109980178/1186666419555930233/Sujet.png?ex=65941439&is=65819f39&hm=4ffa8b3cc1d37a70fc5c8bb6c90a1109f6f20153f4005ca06e05608fecafe676&=&format=webp&quality=lossless&width=695&height=606)
+![final pcb](https://media.discordapp.net/attachments/638778639109980178/1186666419555930233/Sujet.png)
 
 ## Programming the Sensor
 
@@ -125,7 +143,7 @@ The programming was done by creating functions for each of the states we defined
 
 To better get a grasp of the system, we conceived a finite state machine describing the various functions to be used. 
 
-![state machine](https://cdn.discordapp.com/attachments/692420982576513065/1186660316260597801/image.png?ex=65940e8a&is=6581998a&hm=bdf0d67a2730eca1c55bfc7e5528790061e9b63352f79fe9340170eab23d7ba0&)
+![state machine](https://cdn.discordapp.com/attachments/692420982576513065/1186660316260597801/image.png)
 
 The core of the Arduino code is quite simple: 
 - In the setup: 
