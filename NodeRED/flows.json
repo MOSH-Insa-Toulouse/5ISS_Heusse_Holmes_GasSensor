@@ -1,0 +1,209 @@
+[
+    {
+        "id": "b1bcbe196d0ed71a",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "4f89975e4360cf53",
+        "type": "mqtt in",
+        "z": "b1bcbe196d0ed71a",
+        "name": "Chirpstack_LoRa",
+        "topic": "application/2ed98f56-3638-4ae0-9143-f091076d80fc/device/0004a30b00f446b6/event/up",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "32a4500b2110ba90",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 260,
+        "y": 160,
+        "wires": [
+            [
+                "1bb7e965ae3ddf28",
+                "3b00aeb6ad68e3d8"
+            ]
+        ]
+    },
+    {
+        "id": "1bb7e965ae3ddf28",
+        "type": "base64",
+        "z": "b1bcbe196d0ed71a",
+        "name": "",
+        "action": "b64",
+        "property": "payload.data",
+        "x": 460,
+        "y": 100,
+        "wires": [
+            [
+                "28c4396375f97459"
+            ]
+        ]
+    },
+    {
+        "id": "0e72f1ad76a98f11",
+        "type": "ui_text",
+        "z": "b1bcbe196d0ed71a",
+        "group": "226bf7f9cd1dd7b0",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Latest gas detected",
+        "format": "{{msg.payload.data.gas_type}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 850,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "3320e6b0070397b4",
+        "type": "ui_text",
+        "z": "b1bcbe196d0ed71a",
+        "group": "226bf7f9cd1dd7b0",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Time of last message",
+        "format": "{{msg.payload.time}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 860,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "3b00aeb6ad68e3d8",
+        "type": "moment",
+        "z": "b1bcbe196d0ed71a",
+        "name": "",
+        "topic": "",
+        "input": "payload.time",
+        "inputType": "msg",
+        "inTz": "Europe/Paris",
+        "adjAmount": 0,
+        "adjType": "days",
+        "adjDir": "add",
+        "format": "DD.MM.YYYY HH:mm",
+        "locale": "C",
+        "output": "payload.time",
+        "outputType": "msg",
+        "outTz": "Europe/Paris",
+        "x": 500,
+        "y": 220,
+        "wires": [
+            [
+                "3320e6b0070397b4"
+            ]
+        ]
+    },
+    {
+        "id": "bbead14a76328ac9",
+        "type": "ui_gauge",
+        "z": "b1bcbe196d0ed71a",
+        "name": "",
+        "group": "226bf7f9cd1dd7b0",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Gas presence",
+        "label": "",
+        "format": "{{msg.payload.data.gas}}",
+        "min": 0,
+        "max": "1",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": true,
+        "className": "",
+        "x": 840,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "28c4396375f97459",
+        "type": "json",
+        "z": "b1bcbe196d0ed71a",
+        "name": "",
+        "property": "payload.data",
+        "action": "",
+        "pretty": false,
+        "x": 630,
+        "y": 100,
+        "wires": [
+            [
+                "bbead14a76328ac9",
+                "0e72f1ad76a98f11"
+            ]
+        ]
+    },
+    {
+        "id": "32a4500b2110ba90",
+        "type": "mqtt-broker",
+        "name": "chirpstack",
+        "broker": "https://srv-chirpstack.insa-toulouse.fr/",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "226bf7f9cd1dd7b0",
+        "type": "ui_group",
+        "name": "Dashboard",
+        "tab": "c8f8f66e2474752b",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c8f8f66e2474752b",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]

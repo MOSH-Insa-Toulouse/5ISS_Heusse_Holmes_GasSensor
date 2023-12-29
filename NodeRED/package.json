@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@chirpstack/node-red-contrib-chirpstack": "^4.1.1",
+    "node-red-dashboard": "^3.6.2",
+    "node-red-node-base64": "^0.3.0"
+  }
+}
